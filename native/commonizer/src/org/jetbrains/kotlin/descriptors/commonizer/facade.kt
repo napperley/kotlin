@@ -72,3 +72,40 @@ private fun mergeAndCommonize(storageManager: StorageManager, parameters: Common
 
     return mergeResult
 }
+
+private fun checkpoint(name: String) {
+//    fun printMemoryUsage(message: String) {
+//        val runtime = Runtime.getRuntime()
+//
+//        val free = runtime.freeMemory()
+//        val total = runtime.totalMemory()
+//        val used = total - free
+//        val max = runtime.maxMemory()
+//
+//        fun Long.toHumanPresentation() = "${(this / 1024 / 1024)}MB"
+//
+//        println(
+//            """
+//            $message:
+//            - Used:  ${used.toHumanPresentation()}
+//            - Free:  ${free.toHumanPresentation()}
+//            - Total: ${total.toHumanPresentation()}
+//            - Max:   ${max.toHumanPresentation()}
+//        """.trimIndent()
+//        )
+//    }
+//
+//    println()
+//    println("*** Checkpoint \"$name\" ***")
+//    printMemoryUsage("Before-GC memory usage")
+//    print("Triggering GC...")
+//
+//    repeat(20) {
+//        System.gc()
+//    }
+////    Thread.sleep(1000 * 30)
+//
+//    println(" Done")
+//    printMemoryUsage("After-GC memory usage")
+//    println()
+}

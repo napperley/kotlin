@@ -45,6 +45,11 @@ val runCommonizer by tasks.registering(JavaExec::class) {
     main = "org.jetbrains.kotlin.descriptors.commonizer.cli.CommonizerCLI"
 }
 
+val tempReadKlib by tasks.registering(JavaExec::class) {
+    classpath(configurations.compileOnly, sourceSets.main.get().runtimeClasspath)
+    main = "org.jetbrains.kotlin.descriptors.commonizer.metadata.utils.TempReadKlibKt"
+}
+
 sourceSets {
     "main" { projectDefault() }
     "test" { projectDefault() }

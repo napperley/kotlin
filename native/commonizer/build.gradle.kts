@@ -55,6 +55,11 @@ val tempCompareKlibs by tasks.registering(JavaExec::class) {
     main = "org.jetbrains.kotlin.descriptors.commonizer.metadata.utils.TempCompareKlibsKt"
 }
 
+val tempCompareOldNewKlibs by tasks.registering(JavaExec::class) {
+    classpath(configurations.compileOnly, sourceSets.main.get().runtimeClasspath)
+    main = "org.jetbrains.kotlin.descriptors.commonizer.metadata.utils.TempCompareOldNewKlibsKt"
+}
+
 sourceSets {
     "main" { projectDefault() }
     "test" { projectDefault() }

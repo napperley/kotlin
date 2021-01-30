@@ -20,7 +20,10 @@ enum class Family(
     MINGW("exe", "", "dll", "lib", "a"),
     ANDROID("so", "lib", "so", "lib", "a"),
     WASM("wasm", "", "wasm", "", "wasm"),
-    ZEPHYR("o", "lib", "a", "lib", "a");
+    ZEPHYR("o", "lib", "a", "lib", "a"),
+
+    /** Used by targets where no OS is used. */
+    BARE_METAL("", "", "", "lib", "a");
 
     val isAppleFamily: Boolean
         get() = this == OSX || this == IOS || this == TVOS || this == WATCHOS

@@ -12,5 +12,8 @@ enum class Architecture(val bitness: Int) {
     ARM32(32),
     MIPS32(32),
     MIPSEL32(32),
-    WASM32(32);
+    WASM32(32),
+
+    /** An embedded ARM CPU containing a mixture of 16, and 32 bit instructions. */
+    ARM_M0_PLUS(32);
 }

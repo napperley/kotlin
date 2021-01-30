@@ -31,6 +31,7 @@ sealed class KonanTarget(override val name: String, val family: Family, val arch
     object LINUX_MIPS32 : KonanTarget("linux_mips32", Family.LINUX, Architecture.MIPS32)
     object LINUX_MIPSEL32 : KonanTarget("linux_mipsel32", Family.LINUX, Architecture.MIPSEL32)
     object WASM32 : KonanTarget("wasm32", Family.WASM, Architecture.WASM32)
+    object RASPBERRY_PI_PICO : KonanTarget("raspberry_pi_pico", Family.BARE_METAL, Architecture.ARM_M0_PLUS)
 
     // Tunable targets
     class ZEPHYR(val subName: String, val genericName: String = "zephyr") :

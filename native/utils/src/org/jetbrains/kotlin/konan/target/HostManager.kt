@@ -57,7 +57,8 @@ open class HostManager(
             ANDROID_X64,
             ANDROID_ARM32,
             ANDROID_ARM64,
-            WASM32
+            WASM32,
+            RASPBERRY_PI_PICO
         ),
         MINGW_X64 to setOf(
             MINGW_X64,

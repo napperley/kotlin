@@ -303,6 +303,21 @@ interface KotlinTargetContainerWithPresetFunctions : KotlinTargetsContainerWithP
     fun macosX64(name: String, configure: Closure<*>) = macosX64(name) { ConfigureUtil.configure(configure, this) }
     fun macosX64(configure: Closure<*>) = macosX64 { ConfigureUtil.configure(configure, this) }
 
+    fun raspberryPiPico(
+        name: String = "raspberryPiPico",
+        configure: KotlinNativeTarget.() -> Unit = { }
+    ): KotlinNativeTarget =
+        configureOrCreate(
+            name,
+            presets.getByName("raspberryPiPico") as KotlinNativeTargetPreset,
+            configure
+        )
+
+    fun raspberryPiPico() = raspberryPiPico("raspberryPiPico") { }
+    fun raspberryPiPico(name: String) = raspberryPiPico(name) { }
+    fun raspberryPiPico(name: String, configure: Closure<*>) = raspberryPiPico(name) { ConfigureUtil.configure(configure, this) }
+    fun raspberryPiPico(configure: Closure<*>) = raspberryPiPico { ConfigureUtil.configure(configure, this) }
+
     fun linuxArm64(
         name: String = "linuxArm64",
         configure: KotlinNativeTarget.() -> Unit = { }

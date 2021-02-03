@@ -192,7 +192,6 @@ open class HostManager(
             "ios"         to "ios_arm64",
             "iphone_sim"  to "ios_x64",
             "mingw"       to "mingw_x64",
-            "rp2040_pico" to "raspberry_pi_pico"
         )
 
         private val targetAliases: Map<String, List<String>> by lazy {

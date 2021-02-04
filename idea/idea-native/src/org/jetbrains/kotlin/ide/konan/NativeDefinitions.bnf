@@ -60,6 +60,7 @@
     WASM="wasm"
     WASM32="wasm32"
     X64="x64"
+    RASPBERRY_PI_PICO="raspberry_pi_pico"
 
     UNKNOWN_KEY="<unknown key>"
     UNKNOWN_PLATFORM="<unknown platform>"

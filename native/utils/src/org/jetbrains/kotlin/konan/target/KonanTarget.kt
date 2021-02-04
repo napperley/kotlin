@@ -51,7 +51,8 @@ sealed class KonanTarget(override val name: String, val family: Family, val arch
                 MINGW_X86, MINGW_X64,
                 MACOS_X64,
                 LINUX_ARM64, LINUX_ARM32_HFP, LINUX_MIPS32, LINUX_MIPSEL32,
-                WASM32
+                WASM32,
+                RASPBERRY_PI_PICO
             ).associateBy { it.name }
         }
     }
